@@ -17,7 +17,7 @@
     <div class="px-4 menu">
       <ul>
         <li class="mb-4">
-          <router-link :to="{ name: 'home' }" class="flex items-center text-white">
+          <router-link :to="{ name: 'home-index' }" class="flex items-center text-white">
             <span class="mr-2"><i class="fa-solid fa-house"></i></span>
             Home
           </router-link>

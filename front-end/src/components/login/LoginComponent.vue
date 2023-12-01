@@ -60,7 +60,7 @@ export default {
   },
   methods: {
     login() {
-      this.$router.push({ name: "dashboard" });
+      this.$router.push({ name: "home-index" });
     },
   },
 };

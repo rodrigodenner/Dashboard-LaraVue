@@ -1,14 +1,14 @@
 <template>
   <div class="flex">
     <!-- Sidebar -->
-    <div class="w-48 h-screen bg-yellow-800">
+    <div class="w-48 h-screen text-white bg-slate-600">
       <SidebarComponent/>
     </div>
 
     <!-- Content Right -->
     <div class="flex flex-col flex-1">
       <!-- Navbar -->
-      <div class="w-full py-4 bg-yellow-600">
+      <div class="w-full py-4 bg-slate-500">
         <NavbarComponent/>
       </div>
 

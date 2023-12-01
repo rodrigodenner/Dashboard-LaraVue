@@ -4,7 +4,7 @@
       <p><i class="fa fa-star"></i> Logo Marca</p>
     </div>
     <div class="text-white logout">
-      <a href="">Sair <i class="fa-solid fa-right-from-bracket"></i></a>
+      <a href="" @click.prevent="logout">Sair <i class="fa-solid fa-right-from-bracket"></i></a>
     </div>
   </div>
 </template>
@@ -12,8 +12,13 @@
 <script>
 export default {
   name: 'NavbarComponent',
-  setup() {
+  data() {
     return {};
+  },
+  methods: {
+    logout(){
+      this.$router.push({name: 'login'});
+    }
   },
 };
 </script>

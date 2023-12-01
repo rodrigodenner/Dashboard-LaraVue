@@ -1,21 +1,45 @@
 <template>
   <div class="sidebar">
-    <div class="top">
+    <div class="flex items-center p-4 mt-16 mb-8 top">
       <div class="avatar">
-        <span><i class="fa fa-user"></i></span>
+        <span class="flex items-center justify-center block w-12 h-12 text-2xl text-gray-600 bg-gray-300 rounded-full">
+          <i class="fa fa-user"></i>
+        </span>
       </div>
-      <div class="avatar-desc">
-        <p class="name">Rodrigo Denner</p>
-        <p class="status">Online</p>
+      <div class="ml-4 avatar-desc">
+        <p class="flex text-sm text-white name">
+          <span class="mr-1">Rodrigo</span>
+          <span>Denner</span>
+        </p>
+        <p class="text-xs text-white status">Online</p>
       </div>
     </div>
-    <div class="menu">
+    <div class="px-4 menu">
       <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li class="mb-4">
+          <router-link :to="{ name: 'home' }" class="flex items-center text-white">
+            <span class="mr-2"><i class="fa-solid fa-house"></i></span>
+            Home
+          </router-link>
+        </li>
+        <li class="mb-4">
+          <router-link :to="{ name: 'products' }" class="flex items-center text-white">
+            <span class="mr-2"><i class="fa-brands fa-product-hunt"></i></span>
+            Produtos
+          </router-link>
+        </li>
+        <li class="mb-4">
+          <router-link :to="{ name: 'vends' }" class="flex items-center text-white">
+            <span class="mr-2"><i class="fa-solid fa-sack-dollar"></i></span>
+            Vendas
+          </router-link>
+        </li>
+        <li>
+          <router-link :to="{ name: 'relators' }" class="flex items-center text-white">
+            <span class="mr-2"><i class="fa-solid fa-chart-line"></i></span>
+            Relatórios
+          </router-link>
+        </li>
       </ul>
     </div>
   </div>
@@ -23,60 +47,13 @@
 
 <script>
 export default {
-  name:'SidebarComponent',
-  setup () {
-    return {
-
-    }
-  }
-}
+  name: "SidebarComponent",
+  setup() {
+    return {};
+  },
+};
 </script>
 
-<style  scoped>
-
-.sidebar{
- padding: 25px 5px;
-}
-.top{
-  width: 100%;
-  display: flex;
-  padding:10px ;
-  margin-top: 60px;
-  margin-bottom: 20px;
-  align-items: center;
-  
-}
-
-.avatar span{
-  display: block;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #ccc;
-  display: flex;
-  justify-content: center;
-  align-items:center ;
-  font-size: 30px;
-  color: #666666;
-}
-
-.avatar-desc {
-  margin-left: 10px;
-}
-.avatar-desc p {
-  margin-left: 0;
-  color: #fff;
-}
-.avatar-desc .name{
-  font-size: 13px;
-}
-
-.avatar-desc .status{
-  font-size: 12px;
-}
-
-
-.menu{
-  background-color:red;
-}
+<style>
+/* You can remove the existing styles since Tailwind classes are used in the template */
 </style>

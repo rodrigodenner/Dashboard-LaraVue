@@ -14,22 +14,22 @@
 
       <!-- Pages -->
       <div class="flex-1 bg-yellow-400">
-        <ContentComponet/>
+        <slot name="slot-pages" ></slot>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import ContentComponet from './ContentComponet.vue';
-import NavbarComponent from './NavbarComponent.vue';
-import SidebarComponent from './SidebarComponent.vue';
+
+import NavbarComponent from './navbarComponent/NavbarComponent.vue';
+import SidebarComponent from '@/components/dashboard/sidebarComponent/SidebarComponent.vue';
 
 export default {
   components: { 
     SidebarComponent, 
-    NavbarComponent, 
-    ContentComponet },
+    NavbarComponent
+    },
   name: 'DashboardComponent',
   setup() {
     return {};

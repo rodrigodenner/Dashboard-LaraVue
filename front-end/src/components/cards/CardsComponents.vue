@@ -1,17 +1,18 @@
 <template>
-  <div class="flex flex-col my_card md:w-full">
-    <div class="top mb-4">
+  <div class="flex flex-col my-8 md:w-full bg-green-200 p-6 rounded-md text-gray-700">
+    <div class="top mb-4 flex justify-between items-center">
       <h3 class="text-lg font-bold">Clientes</h3>
-      <p class="percentagem flex items-center">
-        <i class="fas fa-arrow-up text-green-500 mr-1"></i> 7
+      <p class="flex items-center">
+        <i class="fas fa-arrow-up text-green-500 mr-1"></i>
+        <span class="text-sm">7</span>
         <i class="fa-thin fa-percent"></i>
       </p>
     </div>
-    <div class="footer flex items-center">
+    <div class="footer flex justify-between items-center">
       <span class="text-2xl mr-2">
         <i class="fas fa-users"></i>
       </span>
-      <p class="qtd text-xl">9570</p>
+      <p class="text-xl">9570</p>
     </div>
   </div>
 </template>
@@ -25,30 +26,5 @@ export default {
 </script>
 
 <style scoped>
-.my_card {
-  margin-top: 20px;
-  background-color: rgb(177, 241, 212);
-  padding: 15px;
-  border-radius: 7px;
-  color: rgb(42, 42, 42);
-  
-}
-
-.top,
-.footer {
-  display: flex;
-  justify-content: space-between;
-}
-
-.top {
-  margin-bottom: 20px;
-}
-
-.percentagem i {
-  font-size: 18px;
-}
-
-.footer span {
-  font-size: 20px;
-}
+/* Se houver necessidade de estilos adicionais, você pode adicioná-los aqui. */
 </style>

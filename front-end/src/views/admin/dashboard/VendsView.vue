@@ -3,7 +3,9 @@
    <dashboard-component>
      <template #slot-pages>
         <div class="content">
-          Pagina Vends View
+          <header class="title">
+            Pagina Vends View
+          </header>
         </div>
       </template>
    </dashboard-component>

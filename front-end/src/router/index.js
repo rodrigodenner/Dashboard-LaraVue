@@ -11,22 +11,22 @@ const routes = [
   {
     path: '/home',
     name: 'home-index',
-    component: () => import( '../views/admin/pages/HomeView.vue')
+    component: () => import( '../views/admin/dashboard/HomeView.vue')
   },
   {
     path: '/products',
     name: 'products',
-    component: () => import( '../views/admin/pages/ProductsView.vue')
+    component: () => import( '../views/admin/dashboard/ProductsView.vue')
   },
   {
     path: '/vends',
     name: 'vends',
-    component: () => import( '../views/admin/pages/VendsView.vue')
+    component: () => import( '../views/admin/dashboard/VendsView.vue')
   },
   {
     path: '/relators',
     name: 'relators',
-    component: () => import( '../views/admin/pages/RelatorsView.vue')
+    component: () => import( '../views/admin/dashboard/RelatorsView.vue')
   },
 ]
 

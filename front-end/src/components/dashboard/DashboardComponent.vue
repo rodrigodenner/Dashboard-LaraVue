@@ -13,7 +13,7 @@
       </div>
 
       <!-- Pages -->
-      <div class="flex-1 bg-yellow-400">
+      <div class="flex-1">
           <div class="p-5">
             <slot name="slot-pages"></slot>
           </div>

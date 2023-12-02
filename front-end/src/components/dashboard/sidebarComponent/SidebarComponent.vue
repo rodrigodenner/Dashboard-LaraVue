@@ -55,5 +55,4 @@ export default {
 </script>
 
 <style>
-/* You can remove the existing styles since Tailwind classes are used in the template */
 </style>

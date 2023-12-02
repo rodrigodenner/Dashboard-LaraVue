@@ -3,7 +3,9 @@
    <dashboard-component>
      <template #slot-pages>
         <div class="content">
-          Pagina Relators View
+          <header class="title">
+            Pagina Relators View
+          </header>
         </div>
       </template>
    </dashboard-component>

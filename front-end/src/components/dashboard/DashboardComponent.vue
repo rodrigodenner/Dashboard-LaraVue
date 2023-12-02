@@ -13,24 +13,25 @@
       </div>
 
       <!-- Pages -->
-      <div class="flex-1">
-          <div class="p-5">
-            <slot name="slot-pages"></slot>
-          </div>
+      <div class="flex-1 ">
+        <div class="p-5">
+          <slot name="slot-pages"></slot>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+
 import NavbarComponent from './navbarComponent/NavbarComponent.vue';
-import SidebarComponent from '@/components/dashboard/sidebarComponent/SidebarComponent.vue';
+import SidebarComponent from './sidebarComponent/SidebarComponent.vue';
 
 export default {
-  components: { 
-    SidebarComponent, 
-    NavbarComponent 
-     },
+  components: {
+    SidebarComponent,
+    NavbarComponent
+  },
   name: 'DashboardComponent',
   setup() {
     return {};

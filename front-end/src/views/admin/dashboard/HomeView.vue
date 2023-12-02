@@ -29,11 +29,12 @@
 
 <script>
 import CardsComponents from "../../../components/cards/CardsComponents.vue";
-import DashboardComponent from "../../../components/dashboard/DashboardComponent.vue";
+import DashboardComponent from "@/components/dashboard/DashboardComponent.vue";
+
 
 export default {
   name: "HomeView",
-  components: { DashboardComponent, CardsComponents },
+  components: {DashboardComponent, CardsComponents },
   data() {
     return {};
   },

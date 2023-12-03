@@ -1,26 +1,34 @@
 <template>
-  <div class="flex flex-col my-8 md:w-full bg-green-200 p-6 rounded-md text-gray-700">
-    <div class="top mb-4 flex justify-between items-center">
-      <h3 class="text-lg font-bold">Clientes</h3>
+  <div
+    :class="['flex flex-col p-6 my-8 text-gray-700', bgColor,'rounded-md md:w-full']"
+  >
+    <div class="flex items-center justify-between mb-4 top">
+      <h3 class="text-lg font-bold">{{ type }}</h3>
       <p class="flex items-center">
-        <i class="fas fa-arrow-up text-green-500 mr-1"></i>
-        <span class="text-sm">7</span>
-        <i class="fa-thin fa-percent"></i>
+        <i :class="['mr-1 text-green-500 fa', iconScore]"></i>
+        <span class="text-lg font-normal">{{percentagem}} <i :class="['fa-thin', iconPercentagem]"></i></span>
       </p>
     </div>
-    <div class="footer flex justify-between items-center">
-      <span class="text-2xl mr-2">
-        <i class="fas fa-users"></i>
+    <div class="flex items-center justify-between footer">
+      <span class="mr-2 text-2xl">
+        <i :class="['fa ', iconCard]"></i>
       </span>
-      <p class="text-xl">9570</p>
+      <p class="text-xl">{{qtd}}</p>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {};
+  name: "CardsComponent",
+  props: {
+    bgColor: String,
+    type: String,
+    iconScore: String,
+    percentagem: String,
+    iconPercentagem: String,
+    iconCard: String,
+    qtd: String,
   },
 };
 </script>

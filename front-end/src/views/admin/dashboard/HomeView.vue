@@ -3,7 +3,7 @@
     <dashboard-component>
       <template #slot-pages>
         <div class="content">
-          <header class="text-base">Pagina Home View</header>
+          <!-- <header class="text-base">Home</header> -->
           <div class="flex flex-wrap">
             <div class="w-full mr-5 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
               <CardsComponents
@@ -44,11 +44,20 @@
                 :type="'Relatórios'"
                 :iconScore="'fa-arrow-up'"
                 :percentagem="'14'"
-                :iconCard="'fa-history'"
+                :iconCard="'fa-file-text'"
                 :qtd="'56'"
               />
             </div>
           </div>
+        </div>
+        <div>
+          <list-component>
+            <div class="flex flex-wrap">
+              <div class="w-full mr-5 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 ">
+                
+              </div>
+            </div>
+          </list-component>
         </div>
       </template>
     </dashboard-component>
@@ -58,10 +67,11 @@
 <script>
 import CardsComponents from "../../../components/cards/CardsComponents.vue";
 import DashboardComponent from "@/components/dashboard/DashboardComponent.vue";
+import ListComponent from '../../../components/lists/ListComponent.vue';
 
 export default {
   name: "HomeView",
-  components: { DashboardComponent, CardsComponents },
+  components: { DashboardComponent, CardsComponents, ListComponent },
   data() {
     return {};
   },

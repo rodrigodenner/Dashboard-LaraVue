@@ -50,11 +50,14 @@
             </div>
           </div>
         </div>
-        <div>
+        <div class="flex">
           <div
-            class="w-3/5 p-2 mt-3 overflow-y-auto bg-white border border-gray-200 rounded-lg shadow max-h-60 sm:p-2 dark:bg-gray-800 dark:border-gray-700"
+            class="w-1/2 p-2 mt-3 overflow-y-auto bg-white border border-gray-200 rounded-lg shadow max-h-72 sm:p-2 dark:bg-gray-800 dark:border-gray-700"
           >
-            <ListComponent/>
+            <ListComponent :users="users" />
+          </div>
+          <div class="w-1/2 p-2 mt-3 ml-4 overflow-y-auto bg-white border border-gray-200 rounded-lg shadow max-h-72 sm:p-2 dark:bg-gray-800 dark:border-gray-700">
+            ....
           </div>
         </div>
       </template>
@@ -63,7 +66,7 @@
 </template>
 
 <script>
-import axios from 'axios';
+import axios from "axios";
 
 import CardsComponents from "../../../components/cards/CardsComponents.vue";
 import DashboardComponent from "@/components/dashboard/DashboardComponent.vue";
@@ -74,14 +77,20 @@ export default {
   components: { DashboardComponent, CardsComponents, ListComponent },
   data() {
     return {
-      users:[],
+      users: [],
     };
   },
   methods: {
-     async getUsers(){
-      const response = await axios.get('https://jsonplaceholder.typicode.com/users');
-      console.log(response.data);
-    }
+    async getUsers() {
+      try {
+        const response = await axios.get(
+          "https://jsonplaceholder.typicode.com/users"
+        );
+        this.users = response.data;
+      } catch (error) {
+        console.log(error);
+      }
+    },
   },
   mounted() {
     this.getUsers();

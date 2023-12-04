@@ -1,8 +1,8 @@
 <template>
   <div
-    :class="['flex flex-col p-6 my-8 text-gray-700', bgColor,'rounded-md md:w-full']"
+    :class="['flex flex-col p-6 my-4 text-gray-700', bgColor,'rounded-md md:w-full']"
   >
-    <div class="flex items-center justify-between mb-4 top">
+    <div class="flex items-center justify-between mb-2 top">
       <h3 class="text-lg font-bold">{{ type }}</h3>
       <p class="flex items-center">
         <i :class="['mr-1 text-green-500 fa', iconScore]"></i>

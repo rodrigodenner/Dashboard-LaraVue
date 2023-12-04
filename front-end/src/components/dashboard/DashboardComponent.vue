@@ -1,5 +1,5 @@
 <template>
-  <div class="flex">
+  <div class="flex bg-gray-200">
     <!-- Sidebar -->
     <div class="w-48 h-screen text-white bg-slate-600">
       <SidebarComponent/>
@@ -26,6 +26,8 @@
 
 import NavbarComponent from './navbarComponent/NavbarComponent.vue';
 import SidebarComponent from './sidebarComponent/SidebarComponent.vue';
+
+
 
 export default {
   components: {

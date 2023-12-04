@@ -39,7 +39,7 @@
               />
             </div>
             <div class="w-full mr-5 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-               <CardsComponents
+              <CardsComponents
                 :bgColor="'bg-cyan-200'"
                 :type="'Relatórios'"
                 :iconScore="'fa-arrow-up'"
@@ -50,10 +50,12 @@
             </div>
           </div>
         </div>
-        <div>    
-          <div class="w-3/5 p-4 overflow-y-auto bg-white border border-gray-200 rounded-lg shadow max-h-60 sm:p-8 dark:bg-gray-800 dark:border-gray-700">
-            <list-component></list-component>
-          </div> 
+        <div>
+          <div
+            class="w-3/5 p-2 mt-3 overflow-y-auto bg-white border border-gray-200 rounded-lg shadow max-h-60 sm:p-2 dark:bg-gray-800 dark:border-gray-700"
+          >
+            <ListComponent/>
+          </div>
         </div>
       </template>
     </dashboard-component>
@@ -61,15 +63,28 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 import CardsComponents from "../../../components/cards/CardsComponents.vue";
 import DashboardComponent from "@/components/dashboard/DashboardComponent.vue";
-import ListComponent from '../../../components/lists/ListComponent.vue';
+import ListComponent from "../../../components/lists/ListComponent.vue";
 
 export default {
   name: "HomeView",
   components: { DashboardComponent, CardsComponents, ListComponent },
   data() {
-    return {};
+    return {
+      users:[],
+    };
+  },
+  methods: {
+     async getUsers(){
+      const response = await axios.get('https://jsonplaceholder.typicode.com/users');
+      console.log(response.data);
+    }
+  },
+  mounted() {
+    this.getUsers();
   },
 };
 </script>

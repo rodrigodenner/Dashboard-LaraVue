@@ -50,14 +50,10 @@
             </div>
           </div>
         </div>
-        <div>
-          <list-component>
-            <div class="flex flex-wrap">
-              <div class="w-full mr-5 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 ">
-                
-              </div>
-            </div>
-          </list-component>
+        <div>    
+          <div class="w-3/5 p-4 overflow-y-auto bg-white border border-gray-200 rounded-lg shadow max-h-60 sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+            <list-component></list-component>
+          </div> 
         </div>
       </template>
     </dashboard-component>

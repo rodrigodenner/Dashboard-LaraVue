@@ -1,51 +1,53 @@
-<!-- Listcomponent.vue -->
-
 <template>
-  <div class="max-w-md p-3 bg-white border border-gray-200 rounded-lg shadow">
-    <div class="mb-5 text-lg text-gray-700 uppercase bg-white border-b bg-gray-50 d">
-      <h3>Clientes</h3>
-    </div>
-    <div class="relative overflow-x-auto overflow-y-auto">
-      <table class="w-full text-sm text-left text-gray-500 rtl:text-right">
-        <thead class="text-xs text-gray-700 uppercase bg-white border-b bg-gray-50 d">
-          <tr>
-            <th scope="col" class="sticky top-0 z-10 px-6 py-3 bg-white">
-              Nome
-            </th>
-            <th scope="col" class="sticky top-0 z-10 px-6 py-3 bg-white">
-              Email
-            </th>
-            <th scope="col" class="sticky top-0 z-10 px-6 py-3 bg-white">
-              Telefone
-            </th>
-          </tr>
+<div class="overflow-scroll ">
+  <h4 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white" >Clientes</h4>
+    <table class="w-full text-sm text-left text-gray-500 rtl:text-right dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    Nome
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Email
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Contato
+                </th>
+                
+            </tr>
         </thead>
-        <tbody>
-          <tr v-for="(item, index) in items" :key="index" class="bg-white border-b d">
-            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-              
-            </th>
-            <td class="px-6 py-4">
-              {{ item.email }}
-            </td>
-            <td class="px-6 py-4">
-              {{ item.phone }}
-            </td>
-          </tr>
+        <tbody class="overflow-y-auto max-h-72 ">
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    Apple MacBook Pro 17"
+                </th>
+                <td class="px-6 py-4">
+                    rodrigo@gmail.com
+                </td>
+                <td class="px-6 py-4">
+                    Laptop
+                </td>
+            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    Microsoft Surface Pro
+                </th>
+                <td class="px-6 py-4">
+                    White
+                </td>
+                <td class="px-6 py-4">
+                    Laptop PC
+                </td>
+            </tr> 
         </tbody>
-      </table>
-    </div>
-  </div>
+    </table>
+</div>
 </template>
 
 <script>
 export default {
   data() {
-    return {
-      items: [
-        // Adicione seus dados aqui
-      ],
-    };
+    return {};
   },
 };
 </script>
@@ -53,9 +55,4 @@ export default {
 <style scoped>
 /* Estilos específicos para o componente Listcomponent */
 /* Adicione estilos adicionais conforme necessário */
-/* A altura máxima não é mais definida para permitir a rolagem vertical */
-.table-scrollable {
-  max-height: 96px; /* Ajuste conforme necessário */
-  overflow-y: auto;
-}
 </style>

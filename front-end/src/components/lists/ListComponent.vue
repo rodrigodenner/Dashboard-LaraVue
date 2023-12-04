@@ -46,6 +46,7 @@
 
 <script>
 export default {
+name:'ListComponent',
   data() {
     return {};
   },
@@ -53,6 +54,5 @@ export default {
 </script>
 
 <style scoped>
-/* Estilos específicos para o componente Listcomponent */
-/* Adicione estilos adicionais conforme necessário */
+
 </style>

@@ -52,13 +52,11 @@
         </div>
         <div class="flex">
           <div
-            class="w-1/2 p-2 mt-3 overflow-y-auto bg-white border border-gray-200 rounded-lg shadow max-h-72 sm:p-2 dark:bg-gray-800 dark:border-gray-700"
+            class="w-full p-2 mt-3 overflow-y-auto bg-white border border-gray-200 rounded-lg shadow max-h-72 sm:p-2 dark:bg-gray-800 dark:border-gray-700"
           >
             <ListComponent :users="users" />
           </div>
-          <div class="w-1/2 p-2 mt-3 ml-4 overflow-y-auto bg-white border border-gray-200 rounded-lg shadow max-h-72 sm:p-2 dark:bg-gray-800 dark:border-gray-700">
-            ....
-          </div>
+          
         </div>
       </template>
     </dashboard-component>

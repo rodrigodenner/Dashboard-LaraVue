@@ -14,6 +14,7 @@
         <tr>
           <th scope="col" class="px-3 py-3">Nome</th>
           <th scope="col" class="px-3 py-3">Email</th>
+          <th scope="col" class="px-3 py-3">Contato</th>
         </tr>
       </thead>
       <tbody class="overflow-y-auto max-h-72">
@@ -30,6 +31,9 @@
           </th>
           <td class="px-6 py-4">
             {{ user.email }}
+          </td>
+           <td class="px-6 py-4">
+            {{ user.phone }}
           </td>
         </tr>
       </tbody>

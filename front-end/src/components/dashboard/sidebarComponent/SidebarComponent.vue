@@ -29,6 +29,12 @@
           </router-link>
         </li>
         <li class="mb-4">
+          <router-link :to="{ name: 'clients' }" class="flex items-center text-white">
+            <span class="mr-2"><i class="fa-solid fa-users-viewfinder"></i></span>
+            Clientes
+          </router-link>
+        </li>
+        <li class="mb-4">
           <router-link :to="{ name: 'vends' }" class="flex items-center text-white">
             <span class="mr-2"><i class="fa-solid fa-sack-dollar"></i></span>
             Vendas

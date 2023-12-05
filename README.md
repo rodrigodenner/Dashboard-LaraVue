@@ -1,3 +1,5 @@
+# Dashboard LaraVue
+
 Bem-vindo ao Dashboard Vue.js com Laravel API, um projeto SPA que utiliza Vue.js no front end, Tailwind CSS para estilização e Laravel no back end para fornecer uma API. Este projeto possui um conjunto de páginas, incluindo Home, Produtos, Vendas e Relatórios.
 
 ## Visão Geral
@@ -6,7 +8,7 @@ O Dashboard é projetado para fornecer uma experiência de gerenciamento eficien
 
 
 
-![Home](readme.png)
+![Home](/front-end/readme.png)
 
 ## Funcionalidades Principais
 

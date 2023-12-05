@@ -1,5 +1,5 @@
 <template>
-  <div class="flex bg-gray-200">
+  <div class="flex bg-gray-200 ">
     <!-- Sidebar -->
     <div class="w-48 h-screen text-white bg-slate-600">
       <SidebarComponent/>

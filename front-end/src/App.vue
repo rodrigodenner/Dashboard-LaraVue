@@ -1,5 +1,5 @@
 <template>
-  <div class="md:container md:mx-auto">
+  <div class="md:container md:mx-auto max-width: 768px">
     <router-view/>
   </div>
 </template>

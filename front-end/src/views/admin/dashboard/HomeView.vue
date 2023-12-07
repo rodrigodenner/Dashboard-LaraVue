@@ -12,8 +12,8 @@
                 :iconScore="'fa-arrow-up'"
                 :percentagem="'7'"
                 :iconPercentagem="'fa-percent'"
-                :iconCard="'fa-clientes'"
-                :qtd="'9570'"
+                :iconCard="'fa-users'"
+                :qtd="clientes.length"
               />
             </div>
             <div class="w-full mr-5 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
@@ -24,7 +24,7 @@
                 :percentagem="'12'"
                 :iconPercentagem="'fa-percent'"
                 :iconCard="'fa-box'"
-                :qtd="'350'"
+                :qtd="products.length"
               />
             </div>
             <div class="w-full mr-5 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
@@ -52,12 +52,12 @@
         </div>
         <div class="flex">
           <div
-            class="w-1/2 p-2 mt-6 overflow-y-auto bg-white border border-gray-200 rounded-lg shadow max-h-96 sm:p-2 dark:bg-gray-800 dark:border-gray-700"
+            class="w-1/2 p-2 mt-6 overflow-y-auto bg-white border border-gray-200 rounded-lg shadow max-h-96 sm:p-2 dark:bg-gray-800 dark:border-gray-700 mr-3"
           >
             <ListComponent :data="clientes" :title="'Clientes'" :description="{ optOne: 'Nome', optTwo: 'E-mail' }" />
           </div>
           <div
-            class="w-1/2 p-2 mt-6 ml-3 overflow-y-auto bg-white border border-gray-200 rounded-lg shadow max-h-96 sm:p-2 dark:bg-gray-800 dark:border-gray-700"
+            class="w-1/2 p-2 mt-6  overflow-y-auto bg-white border border-gray-200 rounded-lg shadow max-h-96 sm:p-2 dark:bg-gray-800 dark:border-gray-700"
           >
            <ListComponent :data="products" :title="'Produtos'" :description="{ optOne: 'Nome', optTwo: 'Valor' }" />
           </div>
@@ -83,21 +83,21 @@ export default {
     };
   },
   methods: {
-    async getclientes() {
+    async getDatas() {
       try {
         const response = await axios.get(
           "http://localhost:8000/api/home"
         );
-        console.log(response.data);
         this.clientes = [...response.data.clientes];
         this.products = [...response.data.products];
+
       } catch (error) {
         console.log(error);
       }
     },
   },
   mounted() {
-    this.getclientes();
+    this.getDatas();
   },
 };
 </script>

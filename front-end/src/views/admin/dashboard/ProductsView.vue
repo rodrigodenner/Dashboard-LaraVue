@@ -22,7 +22,7 @@ export default {
   components: { DashboardComponent },
   data() {
     return {}
-  }
+  },
 }
 </script>
 

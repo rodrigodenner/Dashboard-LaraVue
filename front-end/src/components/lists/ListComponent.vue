@@ -19,18 +19,18 @@
       </thead>
       <tbody class="overflow-y-auto max-h-72">
         <tr
-          v-for="user in data"
-          :key="user.id"
+         v-for="item in data"
+         :key="item.id"
           class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
         >
           <th
             scope="row"
             class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
           >
-            {{ user.name }}
+            {{ item.name }}
           </th>
           <td class="px-6 py-4">
-            {{ user.email }}
+            {{ item.email || formatValue(item.valor) }}
           </td>
           
         </tr>
@@ -43,11 +43,22 @@
 export default {
   name: "ListComponent",
   props: {
-    data: Array,
+    data: Object,
     title: String,
     description: {
       optOne: String,
       optTwo: String,
+    },
+  },
+  methods: {
+      formatValue(value) {
+      // Formata o valor como uma quantia em reais (R$)
+      const formattedValue = new Intl.NumberFormat("pt-BR", {
+        style: "currency",
+        currency: "BRL",
+      }).format(value);
+
+      return formattedValue;
     },
   },
 };

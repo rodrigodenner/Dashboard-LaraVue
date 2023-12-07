@@ -12,7 +12,7 @@
                 :iconScore="'fa-arrow-up'"
                 :percentagem="'7'"
                 :iconPercentagem="'fa-percent'"
-                :iconCard="'fa-users'"
+                :iconCard="'fa-clientes'"
                 :qtd="'9570'"
               />
             </div>
@@ -54,12 +54,12 @@
           <div
             class="w-1/2 p-2 mt-6 overflow-y-auto bg-white border border-gray-200 rounded-lg shadow max-h-96 sm:p-2 dark:bg-gray-800 dark:border-gray-700"
           >
-            <ListComponent :data="users" :title="'Clientes'" :description="{ optOne: 'Nome', optTwo: 'E-mail' }" />
+            <ListComponent :data="clientes" :title="'Clientes'" :description="{ optOne: 'Nome', optTwo: 'E-mail' }" />
           </div>
           <div
             class="w-1/2 p-2 mt-6 ml-3 overflow-y-auto bg-white border border-gray-200 rounded-lg shadow max-h-96 sm:p-2 dark:bg-gray-800 dark:border-gray-700"
           >
-            <ListComponent :data="users" :title="'Clientes'" :description="{ optOne: 'Nome', optTwo: 'Valor' }" />
+           <ListComponent :data="products" :title="'Produtos'" :description="{ optOne: 'Nome', optTwo: 'Valor' }" />
           </div>
         </div>
       </template>
@@ -69,7 +69,6 @@
 
 <script>
 import axios from "axios";
-
 import CardsComponents from "../../../components/cards/CardsComponents.vue";
 import DashboardComponent from "@/components/dashboard/DashboardComponent.vue";
 import ListComponent from "../../../components/lists/ListComponent.vue";
@@ -79,23 +78,26 @@ export default {
   components: { DashboardComponent, CardsComponents, ListComponent },
   data() {
     return {
-      users: [],
+      clientes: [],
+      products:[],
     };
   },
   methods: {
-    async getUsers() {
+    async getclientes() {
       try {
         const response = await axios.get(
-          "https://jsonplaceholder.typicode.com/users"
+          "http://localhost:8000/api/home"
         );
-        this.users = response.data;
+        console.log(response.data);
+        this.clientes = [...response.data.clientes];
+        this.products = [...response.data.products];
       } catch (error) {
         console.log(error);
       }
     },
   },
   mounted() {
-    this.getUsers();
+    this.getclientes();
   },
 };
 </script>
